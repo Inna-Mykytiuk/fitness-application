@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      container: {
+        center: true,
+        padding: '2rem'
+      },
       width: {
         150: '150px',
         170: '170px',
@@ -79,6 +83,8 @@ export default {
         secondary400: "#FFCD5B",
         secondary500: "#FFC132",
 
+        rose800: "5c0003",
+
         mainColor: '#4B4453',
         mainTextColor: '#4B445390',
         mainTextGrey: '#c3c5c9',
@@ -104,6 +110,7 @@ export default {
       fontFamily: {
         dmsans: ["DM Sans", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
+        nunito: ["Nunito Sans", "sans-serif"],
       },
       content: {
         evolvetext: "url('./src/assets/EvolveText.png')",
