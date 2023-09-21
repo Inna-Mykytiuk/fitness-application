@@ -25,7 +25,10 @@ const Home = ({ setSelectedPage }: Props) => {
     >
       <div className={`${flexBetween} mx-auto w-5/6`}>
         {/* IMAGE AND MAIN HEADER */}
-        <div className="md:flex mx-auto w-5/6 items-center justify-center md:h-5/6">
+        <motion.div 
+        className="md:flex mx-auto w-5/6 items-center justify-center md:h-5/6"
+        onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
+        >
           {/* MAIN HEADER */}
           <div className="z-10 mt-32 md:basis-3/5">
 
@@ -35,7 +38,7 @@ const Home = ({ setSelectedPage }: Props) => {
             initial="hidden"
             whileInView="visible"
             viewport={{once: true, amount: 0.5}}
-            transition={{duration: 0.5}}
+            transition={{duration: 0.8}}
             variants={{
               hidden: {opacity:0, x:-50},
               visible: {opacity: 1, x:0},
@@ -57,7 +60,17 @@ const Home = ({ setSelectedPage }: Props) => {
             </motion.div>
 
             {/* ACTIONS */}
-            <div className="mt-8 flex items-center gap-8">
+            <motion.div 
+            className="mt-8 flex items-center gap-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{once: true, amount: 0.5}}
+            transition={{delay: 0.2, duration: 0.8}}
+            variants={{
+              hidden: {opacity:0, x:-50},
+              visible: {opacity: 1, x:0},
+            }}
+            >
               <ActionButton setSelectedPage={setSelectedPage}>Join now</ActionButton>
               <AnchorLink className="text-sm font-bold text-primary500 underline hover:text-secondary500"
               onClick={() => setSelectedPage(SelectedPage.ContactUs)}
@@ -65,7 +78,7 @@ const Home = ({ setSelectedPage }: Props) => {
               <p>Learn More</p>
 
             </AnchorLink>
-            </div>
+            </motion.div>
             
           </div>
 
@@ -73,7 +86,7 @@ const Home = ({ setSelectedPage }: Props) => {
           <div className="flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-end">
             <img alt="home-page-graphic" src={HomePageGraphic}></img>
           </div>
-        </div>
+        </motion.div>
         {/* SPONSORS */}
         {isAboveMediumScreens && (
           <div className="h-[150px] w-full bg-primary100 py-10">
