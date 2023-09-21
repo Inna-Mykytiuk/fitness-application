@@ -1,13 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;700;900&display=swap');
 
-  @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 
 html,
@@ -24,7 +21,28 @@ body,
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  
 }
+
+/* chrome */
+/* html::-webkit-scrollbar {
+  display: none;
+} */
+
+/* firefox */
+/* html {
+  scrollbar-width: none;
+} */
+
+/* .no-scrollbar::-webkit-scrollbar {
+  display: none;
+} */
 
 @layer components {
   .max-container {
@@ -32,7 +50,6 @@ body,
     width: 100%;
     margin: 0 auto;
   }
-
 }
 
 a {

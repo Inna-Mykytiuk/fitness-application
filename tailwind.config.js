@@ -56,8 +56,6 @@ export default {
       md: "1060px",
         // sm: '640px',
         // md: '768px',
-        // mdX: '912px',
-        // mdXX: '913px',
         // lg: '1024px',
         // xl: '1280px',
         // xlL: '1366px',
@@ -117,14 +115,12 @@ export default {
         abstractwaves: "url('./src/assets/AbstractWaves.png')",
         sparkles: "url('./src/assets/Sparkles.png')",
         circles: "url('./src/assets/Circles.png')",
-      },
-      
-      
+      },  
     },
     
   },
-  
   plugins: ['tailwind-scrollbar'],
+  scrollbar: ['rounded'],  
 };
 
 

@@ -5,7 +5,7 @@ import { SelectedPage } from "../../shared/types";
 import Link from "./Link";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import ActionButton from "../../shared/ActionButton";
-import Container from "../../shared/Container";
+// import Container from "../../shared/Container";
 
 type Props = {
   isTopOfPage: boolean;
@@ -21,7 +21,6 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
 
   return (
     <nav>
-      {/* <div className="flex flex-col w-full h-full items-center justify-between px-4 md:px-0 max-w-7xl mx-auto"> */}
       <div
         className={`${navbarBackground} ${flexBetween} fixed top-0 z-30 w-full py-6`}
       >
@@ -56,7 +55,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                   />
                 </div>
                 <div className={`${flexBetween} gap-8`}>
-                  <p>Sign In</p>
+                  {/* <p>Sign In</p> */}
                   <ActionButton setSelectedPage={setSelectedPage}>
                     Become a Member
                   </ActionButton>
@@ -109,8 +108,6 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
           </div>
         </div>
       )}
-      {/* </div> */}
-
     </nav>
   );
 };
