@@ -25,30 +25,28 @@ const Home = ({ setSelectedPage }: Props) => {
     >
       <div className={`${flexBetween} mx-auto w-5/6`}>
         {/* IMAGE AND MAIN HEADER */}
-        <motion.div 
-        className="md:flex mx-auto w-5/6 items-center justify-center md:h-5/6"
-        onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
+        <motion.div
+          className="md:flex mx-auto w-5/6 items-center justify-center md:h-5/6"
+          onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
         >
           {/* MAIN HEADER */}
           <div className="z-10 mt-32 md:basis-3/5">
 
             {/* HEADINGS */}
-            <motion.div 
-            className="md:-mt-20"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{once: true, amount: 0.5}}
-            transition={{duration: 0.8}}
-            variants={{
-              hidden: {opacity:0, x:-50},
-              visible: {opacity: 1, x:0},
-            }}
+            <motion.div
+              className="md:-mt-20"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.8 }}
+              variants={{
+                hidden: { opacity: 0, x: -50 },
+                visible: { opacity: 1, x: 0 },
+              }}
             >
               <div className="relative">
                 <div className="before:absolute before:-top-20 md:before:content-evolvetext before:-left-20 before:z-[-1]">
                   <img alt="home-page-text" src={HomePageText}></img>
-                  {/* <p className="text-[86px] text-rose800 font-black font-family" >Mini Forest</p>
-              <p className="text-[42px] text-rose800 font-thin tracking-[5px]" >Evolutionary fitness.</p> */}
                 </div>
               </div>
 
@@ -60,26 +58,26 @@ const Home = ({ setSelectedPage }: Props) => {
             </motion.div>
 
             {/* ACTIONS */}
-            <motion.div 
-            className="mt-8 flex items-center gap-8"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{once: true, amount: 0.5}}
-            transition={{delay: 0.2, duration: 0.8}}
-            variants={{
-              hidden: {opacity:0, x:-50},
-              visible: {opacity: 1, x:0},
-            }}
+            <motion.div
+              className="mt-8 flex items-center gap-8"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+              variants={{
+                hidden: { opacity: 0, x: -50 },
+                visible: { opacity: 1, x: 0 },
+              }}
             >
               <ActionButton setSelectedPage={setSelectedPage}>Join now</ActionButton>
               <AnchorLink className="text-sm font-bold text-primary500 underline hover:text-secondary500"
-              onClick={() => setSelectedPage(SelectedPage.ContactUs)}
-              href={`#${SelectedPage.ContactUs}`}>
-              <p>Learn More</p>
+                onClick={() => setSelectedPage(SelectedPage.ContactUs)}
+                href={`#${SelectedPage.ContactUs}`}>
+                <p>Learn More</p>
 
-            </AnchorLink>
+              </AnchorLink>
             </motion.div>
-            
+
           </div>
 
           {/* IMAGE */}

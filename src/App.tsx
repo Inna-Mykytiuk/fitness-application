@@ -28,15 +28,15 @@ function App() {
   return (
     <div className="app bg-gray20">
       <Navbar
-      isTopOfPage={isTopOfPage}
-      selectedPage={selectedPage}
-      setSelectedPage={setSelectedPage}
+        isTopOfPage={isTopOfPage}
+        selectedPage={selectedPage}
+        setSelectedPage={setSelectedPage}
       />
       <Home setSelectedPage={setSelectedPage} />
       <Benefits setSelectedPage={setSelectedPage} />
       <OurClasses setSelectedPage={setSelectedPage} />
       <ContactUs setSelectedPage={setSelectedPage} />
-      <Footer/>
+      <Footer />
     </div>
 
   )

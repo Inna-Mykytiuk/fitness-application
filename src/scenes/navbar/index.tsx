@@ -1,11 +1,10 @@
 import { useState } from "react";
-import { Bars3Icon, XMarkIcon} from "@heroicons/react/24/solid";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import Logo from "../../assets/Logo.png";
 import { SelectedPage } from "../../shared/types";
 import Link from "./Link";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import ActionButton from "../../shared/ActionButton";
-// import Container from "../../shared/Container";
 
 type Props = {
   isTopOfPage: boolean;

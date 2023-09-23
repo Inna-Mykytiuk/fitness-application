@@ -30,20 +30,6 @@ body,
   
 }
 
-/* chrome */
-/* html::-webkit-scrollbar {
-  display: none;
-} */
-
-/* firefox */
-/* html {
-  scrollbar-width: none;
-} */
-
-/* .no-scrollbar::-webkit-scrollbar {
-  display: none;
-} */
-
 @layer components {
   .max-container {
     max-width: 1440px;
@@ -56,14 +42,6 @@ a {
   text-decoration: none;
 }
 
-
-/* body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-} */
 
 h1 {
   font-size: 3.2em;
